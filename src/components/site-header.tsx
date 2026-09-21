@@ -1,0 +1,110 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+
+const NAV_LINKS = [
+  { href: "/level-check", label: "Level check" },
+  { href: "/blog", label: "Tips" },
+  { href: "/pricing", label: "Pricing" },
+  { href: "/about", label: "About" },
+];
+
+export default function SiteHeader({ showTagline = false }: { showTagline?: boolean }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <header className="border-b border-line relative">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+        <Link href="/" onClick={() => setOpen(false)} className="flex items-center gap-2.5">
+          <img src="/sf-icon.png" alt="" className="h-8 w-auto" />
+          <div>
+            <span className="font-display text-lg tracking-tight">
+              <span className="text-ink">Speak</span>
+              <span className="text-teal">Fluidly</span>
+            </span>
+            {showTagline && (
+              <p className="font-mono text-[10px] uppercase tracking-wide text-ink/40">
+                Real English. Real Confidence.
+              </p>
+            )}
+          </div>
+        </Link>
+
+        {/* Desktop nav */}
+        <nav className="hidden md:flex items-center gap-6 text-sm">
+          <Link
+            href="/global"
+            aria-label="Other languages"
+            title="Other languages"
+            className="flex h-8 w-8 items-center justify-center rounded-full border border-line text-base hover:border-coral"
+          >
+            🌐
+          </Link>
+          {NAV_LINKS.map((link) => (
+            <Link key={link.href} href={link.href} className="hover:text-coral transition-colors">
+              {link.label}
+            </Link>
+          ))}
+          <Link
+            href="/contact"
+            className="rounded-full bg-coral px-4 py-1.5 text-xs uppercase tracking-wide text-paper hover:bg-teal transition-colors"
+          >
+            Book a free intro
+          </Link>
+          <Link
+            href="/login"
+            className="rounded-full border border-ink/20 px-4 py-1.5 text-xs uppercase tracking-wide hover:border-coral hover:text-coral transition-colors"
+          >
+            Teacher login
+          </Link>
+        </nav>
+
+        {/* Mobile: compact CTA + hamburger */}
+        <div className="flex items-center gap-2 md:hidden">
+          <Link
+            href="/global"
+            aria-label="Other languages"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-line text-base"
+          >
+            🌐
+          </Link>
+          <Link
+            href="/contact"
+            className="rounded-full bg-coral px-4 py-1.5 text-xs uppercase tracking-wide text-paper"
+          >
+            Free intro
+          </Link>
+          <button
+            aria-label="Open menu"
+            onClick={() => setOpen(!open)}
+            className="flex h-9 w-9 flex-col items-center justify-center gap-1.5 rounded-full border border-line"
+          >
+            <span className={`h-px w-4 bg-ink transition-transform ${open ? "translate-y-[3px] rotate-45" : ""}`} />
+            <span className={`h-px w-4 bg-ink transition-opacity ${open ? "opacity-0" : ""}`} />
+            <span className={`h-px w-4 bg-ink transition-transform ${open ? "-translate-y-[3px] -rotate-45" : ""}`} />
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile dropdown */}
+      {open && (
+        <nav className="md:hidden border-t border-line bg-paper px-6 py-4 flex flex-col gap-4 text-sm">
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              className="hover:text-coral transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Link href="/login" onClick={() => setOpen(false)} className="hover:text-coral transition-colors">
+            Teacher login
+          </Link>
+        </nav>
+      )}
+    </header>
+  );
+}
