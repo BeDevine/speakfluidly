@@ -24,11 +24,11 @@ export default function AboutPage() {
 
         <div className="mt-10 grid gap-10 md:grid-cols-[240px_1fr] md:gap-12">
           <div>
-            <div className="aspect-[4/5] w-full max-w-[240px] rounded-2xl border border-dashed border-line bg-white/50 flex items-center justify-center">
-              <span className="font-mono text-[10px] uppercase tracking-wide text-ink/30 text-center px-4">
-                Photo coming soon
-              </span>
-            </div>
+            <img
+              src="/barry-devine.jpg"
+              alt="Barry Devine, English teacher"
+              className="aspect-[4/5] w-full max-w-[240px] rounded-2xl border border-line object-cover"
+            />
             <a
               href="https://www.linkedin.com/in/barrydevine/"
               target="_blank"
