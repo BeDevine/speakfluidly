@@ -29,6 +29,41 @@ export default async function HomePage() {
     })
     .catch(() => {});
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    name: "Speak Fluidly",
+    description:
+      "One-to-one English coaching to help you speak fluently and confidently — for travel, work, and everyday life.",
+    url: "https://speakfluidly.com",
+    slogan: "Real English. Real Confidence.",
+    areaServed: "Worldwide",
+    founder: {
+      "@type": "Person",
+      jobTitle: "English Coach",
+      description:
+        "PGCE-qualified, native English speaking teacher with 17 years of international teaching experience across Ireland, Italy, Switzerland, Poland, China, Vietnam, Mexico, and Malawi.",
+    },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <HomePageContent recentPosts={recentPosts} recentTestimonials={recentTestimonials} />
+    </>
+  );
+}
+
+function HomePageContent({
+  recentPosts,
+  recentTestimonials,
+}: {
+  recentPosts: Awaited<ReturnType<typeof db.post.findMany>>;
+  recentTestimonials: Awaited<ReturnType<typeof db.testimonial.findMany>>;
+}) {
   return (
     <main>
       <SiteHeader showTagline />
