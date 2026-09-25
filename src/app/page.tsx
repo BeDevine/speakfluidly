@@ -76,7 +76,7 @@ function HomePageContent({
               One-to-One English Coaching
             </p>
             <h1 className="mt-4 font-display text-3xl leading-[1.15] tracking-tight text-ink sm:text-4xl md:text-5xl">
-              Speak with confidence — for travel, work, and everyday life.
+              Your personal English speaking coach — for travel, work, and everyday life.
             </h1>
             <p className="mt-6 max-w-lg text-base leading-relaxed text-ink/70">
               Real conversation practice with a real teacher. No rigid textbook script —
