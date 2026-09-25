@@ -39,6 +39,13 @@ export default async function DashboardPage() {
           </span>
         </div>
 
+        <Link
+          href="/dashboard/testimonials"
+          className="mb-8 inline-block text-sm text-teal hover:underline"
+        >
+          Manage testimonials →
+        </Link>
+
         <div className="flex items-center justify-between">
           <h1 className="font-display text-2xl text-ink">Your posts</h1>
           <Link
