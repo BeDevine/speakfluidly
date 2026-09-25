@@ -71,7 +71,7 @@ export default async function HomePage() {
                   Sessions
                 </span>
                 <span className="font-display text-4xl font-semibold text-ink sm:text-6xl">
-                  $45
+                  $85
                 </span>
                 <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-ink/50 sm:text-[11px]">
                   per 50-min session

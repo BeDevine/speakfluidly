@@ -5,40 +5,40 @@ import SiteHeader from "@/components/site-header";
 export const metadata: Metadata = {
   title: "Pricing | Speak Fluidly",
   description:
-    "Affordable one-to-one English coaching. $50 per hour, with discounted packages available. Free 20-minute intro call.",
+    "One-to-one English coaching. $85 per session, with discounted packages available. Free 20-minute intro call.",
   openGraph: {
     title: "Pricing | Speak Fluidly",
-    description: "Affordable one-to-one English coaching from $50/hour.",
+    description: "One-to-one English coaching from $85/session.",
   },
 };
 
 const packages = [
   {
     name: "Single session",
-    price: "$45",
+    price: "$85",
     unit: "per 50-minute session",
     description: "Try it out, or book flexibly as you go.",
     features: ["One-to-one, 50 minutes", "Focused on your real goals", "Book as you go"],
   },
   {
     name: "5-session package",
-    price: "$210",
-    unit: "$42 per session",
+    price: "$400",
+    unit: "$80 per session",
     description: "A short block to build momentum.",
     features: ["Everything in Single session", "Personalised focus areas", "Priority scheduling"],
   },
   {
     name: "10-session package",
-    price: "$380",
-    unit: "$38 per session",
+    price: "$750",
+    unit: "$75 per session",
     description: "The standard path to real, noticeable progress.",
     features: ["Everything in 5-session", "Progress check-ins", "Message access between sessions"],
     highlighted: true,
   },
   {
     name: "20-session package",
-    price: "$660",
-    unit: "$33 per session",
+    price: "$1,300",
+    unit: "$65 per session",
     description: "For sustained, serious improvement over time.",
     features: ["Everything in 10-session", "Flexible rescheduling", "Best value per session"],
   },
@@ -51,10 +51,10 @@ export default function PricingPage() {
 
       <section className="mx-auto max-w-6xl px-6 py-12 md:py-16">
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-teal">Pricing</p>
-        <h1 className="mt-3 font-display text-3xl text-ink md:text-4xl">Simple, affordable rates</h1>
+        <h1 className="mt-3 font-display text-3xl text-ink md:text-4xl">Clear, straightforward rates</h1>
         <p className="mt-3 max-w-2xl text-ink/65">
           One-to-one coaching, no group classes, no confusing tiers — just honest pricing
-          and real progress.
+          and real progress with your full attention.
         </p>
 
         <div className="mt-6 flex items-start gap-3 rounded-xl border border-teal/30 bg-teal/5 px-5 py-4 max-w-2xl">
