@@ -64,20 +64,22 @@ export default async function HomePage() {
             </div>
           </div>
 
-          <div className="flex items-center justify-center">
-            <div className="relative aspect-square w-48 rotate-3 rounded-3xl border-[3px] border-teal/60 sm:w-64">
-              <div className="flex h-full w-full flex-col items-center justify-center text-center px-4">
-                <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-teal sm:text-xs">
-                  Sessions
-                </span>
-                <span className="font-display text-4xl font-semibold text-ink sm:text-6xl">
-                  $85
-                </span>
-                <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-ink/50 sm:text-[11px]">
-                  per 50-min session
-                </span>
-              </div>
-            </div>
+          <div className="flex flex-col items-center justify-center gap-6">
+            <img src="/sf-icon.png" alt="" className="h-20 w-auto sm:h-28" />
+            <ul className="w-full max-w-xs space-y-2.5">
+              {[
+                "Speak with confidence in everyday conversations",
+                "Sound more professional in meetings and emails",
+                "Improve your English for job interviews and career growth",
+                "Sharpen your presentation and public speaking skills",
+                "Build fluency at your own pace, one-to-one",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2.5 text-sm text-ink/75">
+                  <span className="mt-0.5 text-coral">✓</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
