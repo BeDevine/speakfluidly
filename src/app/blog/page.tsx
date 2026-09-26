@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default async function BlogIndexPage() {
   const posts = await db.post.findMany({
-    where: { published: true },
+    where: { published: true, createdAt: { lte: new Date() } },
     orderBy: { createdAt: "desc" },
   });
 
