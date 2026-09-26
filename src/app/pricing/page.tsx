@@ -5,7 +5,7 @@ import SiteHeader from "@/components/site-header";
 export const metadata: Metadata = {
   title: "Pricing | Speak Fluidly",
   description:
-    "One-to-one English coaching. $85 per session, with discounted packages available. Free 20-minute intro call.",
+    "English coaching at $85 per session (not per person), with discounted packages available. Free 20-minute intro call.",
   openGraph: {
     title: "Pricing | Speak Fluidly",
     description: "One-to-one English coaching from $85/session.",
@@ -18,7 +18,7 @@ const packages = [
     price: "$85",
     unit: "per 50-minute session",
     description: "Try it out, or book flexibly as you go.",
-    features: ["One-to-one, 50 minutes", "Focused on your real goals", "Book as you go"],
+    features: ["50 minutes, on your own or with others", "Focused on your real goals", "Book as you go"],
   },
   {
     name: "5-session package",
@@ -53,8 +53,7 @@ export default function PricingPage() {
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-teal">Pricing</p>
         <h1 className="mt-3 font-display text-3xl text-ink md:text-4xl">Clear, straightforward rates</h1>
         <p className="mt-3 max-w-2xl text-ink/65">
-          One-to-one coaching, no group classes, no confusing tiers — just honest pricing
-          and real progress with your full attention.
+          One simple rate per session — no confusing tiers, and no extra charge per person.
         </p>
 
         <div className="mt-6 flex items-start gap-3 rounded-xl border border-teal/30 bg-teal/5 px-5 py-4 max-w-2xl">
@@ -64,6 +63,17 @@ export default function PricingPage() {
           <p className="text-sm leading-relaxed text-ink/75">
             Every new student starts with a free 20-minute introductory call — no
             obligation, just a chance to meet and figure out what you actually need.
+          </p>
+        </div>
+
+        <div className="mt-4 flex items-start gap-3 rounded-xl border border-coral/30 bg-coral/5 px-5 py-4 max-w-2xl">
+          <span className="font-mono text-xs uppercase tracking-wide text-coral shrink-0 mt-0.5">
+            Per session
+          </span>
+          <p className="text-sm leading-relaxed text-ink/75">
+            Not per person. You're booking my time, not a seat — come on your own or bring a
+            friend, partner or colleagues at no extra cost. Just bear in mind that the more
+            people in the session, the less individual attention each person gets.
           </p>
         </div>
 
