@@ -30,7 +30,7 @@ export default function ContactClient() {
       return;
     }
 
-    setStatus("sent");
+    setStatus("sent"); (window as any).gtag?.("event", "generate_lead");
   }
 
   const inputClass =
