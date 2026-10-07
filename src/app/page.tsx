@@ -21,13 +21,6 @@ export default async function HomePage() {
     })
     .catch(() => []);
 
-  db.siteStat
-    .upsert({
-      where: { id: "main" },
-      update: { count: { increment: 1 } },
-      create: { id: "main", count: 1 },
-    })
-    .catch(() => {});
 
   const structuredData = {
     "@context": "https://schema.org",

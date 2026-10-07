@@ -32,7 +32,7 @@ export default async function DashboardPage() {
       <section className="mx-auto max-w-5xl px-6 py-12">
         <div className="mb-8 inline-flex items-center gap-3 rounded-xl border border-line bg-white/60 px-5 py-4">
           <span className="font-mono text-[10px] uppercase tracking-wide text-ink/50">
-            Site visits
+            Visitors
           </span>
           <span className="font-display text-2xl text-ink">
             {(siteStat?.count ?? 0).toLocaleString()}
