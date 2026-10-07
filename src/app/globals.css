@@ -9,13 +9,13 @@ html {
 }
 
 body {
-  background-color: #fbf7f2;
-  color: #26302e;
+  background-color: #ffffff;
+  color: #1b2b44;
 }
 
 ::selection {
-  background-color: #e8623d;
-  color: #fbf7f2;
+  background-color: #1f3a60;
+  color: #ffffff;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -31,6 +31,6 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #e8623d;
+  outline: 2px solid #1f3a60;
   outline-offset: 2px;
 }
