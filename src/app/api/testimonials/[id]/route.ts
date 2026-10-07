@@ -9,11 +9,11 @@ export async function PUT(req: NextRequest, { params }: RouteContext) {
   const user = await getCurrentUser();
   if (!user) return NextResponse.json({ error: "Not authenticated." }, { status: 401 });
 
-  const { name, context, message, approved } = await req.json();
+  const { name, company, context, message, approved } = await req.json();
 
   const testimonial = await db.testimonial.update({
     where: { id },
-    data: { name, context, message, approved },
+    data: { name, company, context, message, approved },
   });
 
   return NextResponse.json(testimonial);
