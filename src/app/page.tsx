@@ -120,7 +120,7 @@ function HomePageContent({
       </section>
 
       {/* Who this is for */}
-      <section className="border-t border-line bg-white/50">
+      <section className="border-t border-line bg-mist">
         <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
           <h2 className="font-display text-2xl text-ink md:text-3xl">Who this is for</h2>
           <p className="mt-3 max-w-xl text-ink/65">
@@ -246,7 +246,7 @@ function HomePageContent({
       </section>
 
       {/* Testimonials teaser */}
-      <section className="border-t border-line bg-white/40">
+      <section className="border-t border-line bg-mist">
         <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
           <div className="flex items-baseline justify-between">
             <h2 className="font-display text-2xl text-ink md:text-3xl">Testimonials</h2>

@@ -7,7 +7,7 @@ const config: Config = {
       colors: {
         ink: "#1B2B44",
         teal: "#247A8A",
-        paper: "#FFFFFF",
+        paper: "#FFFFFF", mist: "#EEF5F7",
         coral: "#1F3A60",
         line: "#E3EAEE",
       },
