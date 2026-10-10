@@ -287,6 +287,7 @@ function HomePageContent({
             <Link href="/pricing" className="hover:text-coral">
               Pricing
             </Link>
+            <Link href="/faq" className="hover:text-coral">FAQ</Link>
             <Link href="/about" className="hover:text-coral">
               About
             </Link>
